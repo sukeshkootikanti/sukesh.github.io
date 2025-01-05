@@ -9,47 +9,149 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
+            background-color: #F7F9FB;
+            color: #e0e0e0;
             overflow-x: hidden;
+        }
+        .section-content {
+    flex: 1; /* Take up half the space */
+    padding-right: 20px; /* Add some space between content and image */
+}
+        .section-image {
+            flex: 1; /* Take up half the space */
+            object-fit: cover; /* Ensure the image covers the area */
+            height: 100%; /* Fill the height of the container */
+            border-radius: 0 8px 8px 0; /* Round only the right corners */
+            margin-bottom: 0; /* Remove bottom margin */
+        }
+        /* Dark mode styles */
+        body.dark-mode {
+            background-color: #19181A;
+            color: #f4f4f9;
+        }
+
+        body.dark-mode header,
+        body.dark-mode footer {
+            background-color: #2c3e50;
+        }
+
+        body.dark-mode nav a {
+            color: #3498db;
+        }
+
+        body.dark-mode section {
+            background: #2c3e50;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+        }
+
+        body.dark-mode h2 {
+            color: #3498db;
+        }
+
+        /* Button styles */
+        button, .button {
+            background-color: #f3d250;
+            color: #19181A;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover, .button:hover {
+            background-color: #f1c40f;
+        }
+        /* Dark mode toggle button */
+        #dark-mode-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
         }
 
         header {
-            background-color: #4CAF50;
+            background-color: #2c2b2e;
             color: white;
             padding: 20px;
             text-align: center;
         }
 
+        /* New styles for hyperlinks */
+        a {
+            text-decoration: none;
+            background-color: #90ccf4;
+            color: #19181A;
+            padding: 2px 4px;
+            border-radius: 3px;
+            transition: background-color 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #64b5f6;
+        }
+
+        /* Exception for navigation buttons */
+        nav a {
+            background-color: transparent;
+            padding: 0;
+        }
         nav {
-            text-align: center;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
             margin: 20px 0;
         }
 
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #4CAF50;
-            font-weight: bold;
+
+        .nav-button {
+            background-color: #f3d250;
+            color: #19181A;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
             cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.1s ease;
         }
+
+        .nav-button:hover {
+            background-color: #f1c40f;
+            transform: translateY(-2px);
+        }
+
+        .nav-button:active {
+            transform: translateY(0);
+        }
+        nav a {
+            margin: 0;
+            text-decoration: none;
+            color: inherit;
+            font-weight: inherit;
+            cursor: inherit;
+        }
+
 
         section {
             margin: 20px auto;
             max-width: 800px;
-            background: white;
+            background: #2c2b2e;
             padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
             display: none; /* Initially hidden */
+            overflow: hidden; /* Ensure the content doesn't overflow */
         }
 
         section.show {
-            display: block; /* Show when active */
+            display: flex; /* Show when active and use flexbox */
+            align-items: stretch; /* Stretch items to fill the container height */
         }
 
+
         h2 {
-            color: #4CAF50;
+            color: #64b5f6;
             margin-bottom: 10px;
         }
 
@@ -65,10 +167,11 @@
         footer {
             text-align: center;
             padding: 10px;
-            background-color: #4CAF50;
+            background-color: #2c2b2e;
             color: white;
             margin-top: 20px;
         }
+
     </style>
 </head>
 <body>
@@ -80,23 +183,33 @@
        Phone: (+1) 513-413-7635</p>
 </header>
 
+<button id="dark-mode-toggle">Toggle Dark Mode</button>
 <nav>
-    <a href="javascript:void(0);" onclick="changePage('about')">About Me</a>
-    <a href="javascript:void(0);" onclick="changePage('experience')">Experience</a>
-    <a href="javascript:void(0);" onclick="changePage('projects')">Projects</a>
-    <a href="javascript:void(0);" onclick="changePage('skills')">Skills</a>
-    <a href="javascript:void(0);" onclick="changePage('education')">Education</a>
-    <a href="javascript:void(0);" onclick="changePage('certifications')">Certifications</a>
+    <button class="nav-button" onclick="changePage('about')">About Me</button>
+    <button class="nav-button" onclick="changePage('experience')">Experience</button>
+    <button class="nav-button" onclick="changePage('projects')">Projects</button>
+    <button class="nav-button" onclick="changePage('skills')">Skills</button>
+    <button class="nav-button" onclick="changePage('education')">Education</button>
+    <button class="nav-button" onclick="changePage('certifications')">Certifications</button>
 </nav>
 
+
+
+<!-- Section 1: About Me -->
 <!-- Section 1: About Me -->
 <section id="about" class="page-section">
+    <div class="section-content">
     <h2>About Me</h2>
-    <p>Welcome to my portfolio! I am Sukesh Kootikanti, a Software Engineer with expertise in full-stack development, data analytics, and cloud technologies...</p>
+    <p>I am Sukesh Kootikanti, a Software Engineer with expertise in full-stack development, 
+        data analytics, and cloud technologies. Currently pursuing a Master's in Information Technology at the University of Cincinnati with a GPA of 3.96/4. 
+        I am passionate about building efficient and innovative solutions</p>
+    </div>
+    <img src="sukesh.jpg/400x400.png?text=About+Me" alt="About Me" class="section-image">
 </section>
 
 <!-- Section 2: Experience -->
 <section id="experience" class="page-section">
+    <div class="section-content">
     <h2>Experience</h2>
     <ul>
         <li><strong>Software Engineer</strong> - LTIMindtree (Nov 2021 - Aug 2023)<br>
@@ -106,37 +219,49 @@
         <li><strong>Programmer Analyst Trainee</strong> - Cognizant Technology Solutions (Jul 2020 - Jun 2021)<br>
             Improved system performance by 30% through optimization and backend feature enhancements.</li>
     </ul>
+    </div>
+    <img src="https://via.placeholder.com/400x400.png?text=Work+Experience" alt="Work Experience" class="section-image">
 </section>
 
 <!-- Section 3: Projects -->
 <section id="projects" class="page-section">
+    <div class="section-content">
     <h2>Projects</h2>
     <ul>
         <li><strong>Interpreting CNNs for Image Classification:</strong> Visualized and analyzed CNN features for improved classification accuracy.</li>
         <li><strong>Blockchain Cryptocurrency Simulation:</strong> Built with React and Python, reduced transaction errors by 25%.</li>
         <li><strong>React Mobile App:</strong> Optimized a multi-page mobile app, reducing page load time by 15%.</li>
     </ul>
+    </div>
+    <img src="https://via.placeholder.com/400x400.png?text=Projects" alt="Projects" class="section-image">
 </section>
 
 <!-- Section 4: Skills -->
 <section id="skills" class="page-section">
+    <div class="section-content">
     <h2>Skills</h2>
     <p><strong>Programming Languages:</strong> Java, C++, JavaScript, Python, SQL, NoSQL, PowerShell, HTML, CSS/SASS</p>
     <p><strong>Frameworks:</strong> ReactJS, NodeJS, Spring Boot, Django</p>
     <p><strong>Cloud Platforms:</strong> AWS, Microsoft Azure, Google Cloud Platform</p>
     <p><strong>Tools:</strong> GIT, GitLab, Visual Studio, Eclipse</p>
+    </div>
+    <img src="https://via.placeholder.com/400x400.png?text=Skills" alt="Skills" class="section-image">
 </section>
 
 <!-- Section 5: Education -->
 <section id="education" class="page-section">
+    <div class="section-content">
     <h2>Education</h2>
     <p><strong>University of Cincinnati</strong> - Master's in Information Technology (Aug 2023 - Dec 2024)<br>
     GPA: 3.96/4</p>
     <p><strong>Relevant Courses:</strong> Mobile Apps, HCI & Usability, Advanced Algorithms, Machine Learning, Data Engineering.</p>
+        </div>
+    <img src="https://via.placeholder.com/400x400.png?text=Education" alt="Education" class="section-image">
 </section>
 
 <!-- Section 6: Certifications -->
 <section id="certifications" class="page-section">
+    <div class="section-content">
     <h2>Certifications</h2>
     <ul>
         <li>LTI Certified ITOPS Automation Engineer</li>
@@ -144,7 +269,10 @@
         <li>Microsoft Certified Azure Fundamentals</li>
         <li>Java Standard Edition</li>
     </ul>
+    </div>
+    <img src="https://via.placeholder.com/400x400.png?text=Certifications" alt="Certifications" class="section-image">
 </section>
+
 
 <footer>
     <p>&copy; 2024 Sukesh Kootikanti. All Rights Reserved.</p>
@@ -171,7 +299,22 @@
     document.addEventListener("DOMContentLoaded", function() {
         changePage('about'); // Show "About Me" section by default
     });
+
+    // Dark mode toggle functionality
+    const darkModeToggle = document.getElementById('dark-mode-toggle');
+    const body = document.body;
+
+    darkModeToggle.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+        localStorage.setItem('darkMode', body.classList.contains('dark-mode'));
+    });
+
+    // Check for saved dark mode preference
+    if (localStorage.getItem('darkMode') === 'true') {
+        body.classList.add('dark-mode');
+    }
 </script>
+
 
 </body>
 </html>
