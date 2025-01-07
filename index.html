@@ -117,6 +117,8 @@
             cursor: pointer;
             font-weight: bold;
             transition: background-color 0.3s ease, transform 0.1s ease;
+            position: relative;
+            overflow: hidden;
         }
 
         .nav-button:hover {
@@ -127,6 +129,23 @@
         .nav-button:active {
             transform: translateY(0);
         }
+
+        .nav-button::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+        }
+
+        .nav-button:active::after {
+            transform: translateX(0);
+        }
+
         nav a {
             margin: 0;
             text-decoration: none;
@@ -145,12 +164,26 @@
             box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
             display: none; /* Initially hidden */
             overflow: hidden; /* Ensure the content doesn't overflow */
+            transition: transform 0.4s ease-out; /* Add transition for transform */
+            transform: translateY(100%); /* Start off-screen at the bottom */
+            position: absolute; /* Position absolutely for stacking */
+            left: 0;
+            right: 0;
         }
 
         section.show {
             display: flex; /* Show when active and use flexbox */
             align-items: stretch; /* Stretch items to fill the container height */
+            transform: translateY(0); /* Slide in from the bottom */
+            position: relative; /* Reset position for active section */
         }
+
+        section.hide {
+            transform: translateY(100%); /* Slide out to the top */
+        }
+
+
+
 
 
         h2 {
@@ -196,13 +229,14 @@
 
 <button id="dark-mode-toggle">Toggle Dark Mode</button>
 <nav>
-    <button class="nav-button" onclick="changePage('about')">About Me</button>
-    <button class="nav-button" onclick="changePage('experience')">Experience</button>
-    <button class="nav-button" onclick="changePage('projects')">Projects</button>
-    <button class="nav-button" onclick="changePage('skills')">Skills</button>
-    <button class="nav-button" onclick="changePage('education')">Education</button>
-    <button class="nav-button" onclick="changePage('certifications')">Certifications</button>
+    <button class="nav-button" onclick="changePage('about', event)">About Me</button>
+    <button class="nav-button" onclick="changePage('experience', event)">Experience</button>
+    <button class="nav-button" onclick="changePage('projects', event)">Projects</button>
+    <button class="nav-button" onclick="changePage('skills', event)">Skills</button>
+    <button class="nav-button" onclick="changePage('education', event)">Education</button>
+    <button class="nav-button" onclick="changePage('certifications', event)">Certifications</button>
 </nav>
+
 
 
 
@@ -292,25 +326,42 @@
 </footer>
 
 <script>
-    // Function to change pages without reloading and to scroll to the top
-    function changePage(sectionId) {
-        // Hide all sections
+    // Function to change pages with slide transition
+    function changePage(sectionId, isInitialLoad = false) {
         const sections = document.querySelectorAll('.page-section');
+        const selectedPage = document.getElementById(sectionId);
+        const clickedButton = isInitialLoad ? document.querySelector(`[onclick="changePage('${sectionId}', event)"]`) : event.currentTarget;
+
+        // Add slide-in effect to the clicked button
+        if (!isInitialLoad) {
+            clickedButton.classList.add('clicked');
+            setTimeout(() => {
+                clickedButton.classList.remove('clicked');
+            }, 300);
+        }
+
+        // Hide all sections
         sections.forEach(section => {
-            section.classList.remove('show'); // Hide all sections
+            section.classList.remove('show');
+            section.style.display = 'none';
         });
 
         // Show the selected section
-        const selectedPage = document.getElementById(sectionId);
-        selectedPage.classList.add('show'); // Show the selected section
+        selectedPage.style.display = 'flex';
+        setTimeout(() => {
+            selectedPage.classList.add('show');
+        }, 20);
 
-        // Scroll to the top of the page (keeping the content at the top)
+        // Update active button state
+        document.querySelectorAll('.nav-button').forEach(btn => btn.classList.remove('active'));
+        clickedButton.classList.add('active');
+        // Scroll to the top of the page
         window.scrollTo(0, 0);
     }
 
     // Initialize the first page as visible
     document.addEventListener("DOMContentLoaded", function() {
-        changePage('about'); // Show "About Me" section by default
+        changePage('about', true); // Show "About Me" section by default
     });
 
     // Dark mode toggle functionality
@@ -327,6 +378,7 @@
         body.classList.add('dark-mode');
     }
 </script>
+
 
 
 </body>
