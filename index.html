@@ -1,277 +1,78 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
-    <style>
-        h1{
-            background-color: #f3d250;
-            color: #19181A;
-            position: center;
-            margin-left: 30rem;
-            margin-right: 30rem;
-        }
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #F7F9FB;
-            color: #e0e0e0;
-            overflow-x: hidden;
-        }
-        .section-content {
-    flex: 1; /* Take up half the space */
-    padding-right: 20px; /* Add some space between content and image */
-}
-        .section-image {
-            flex: 1; /* Take up half the space */
-            object-fit: cover; /* Ensure the image covers the area */
-            height: 100%; /* Fill the height of the container */
-            border-radius: 0 8px 8px 0; /* Round only the right corners */
-            margin-bottom: 0; /* Remove bottom margin */
-        }
-        /* Dark mode styles */
-        body.dark-mode {
-            background-color: #19181A;
-            color: #f4f4f9;
-        }
-
-        body.dark-mode header,
-        body.dark-mode footer {
-            background-color: #2c3e50;
-        }
-
-        body.dark-mode nav a {
-            color: #3498db;
-        }
-
-        body.dark-mode section {
-            background: #2c3e50;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-        }
-
-        body.dark-mode h2 {
-            color: #3498db;
-        }
-
-        /* Button styles */
-        button, .button {
-            background-color: #f3d250;
-            color: #19181A;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: background-color 0.3s ease;
-        }
-
-        button:hover, .button:hover {
-            background-color: #f1c40f;
-        }
-        /* Dark mode toggle button */
-        #dark-mode-toggle {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-        }
-
-        header {
-            background-color: #2c2b2e;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-
-        /* New styles for hyperlinks */
-        a {
-            text-decoration: none;
-            color: #90ccf4;
-            padding: 2px 4px;
-            border-radius: 3px;
-            transition: background-color 0.3s ease;
-        }
-
-        a:hover {
-            background-color: #f3d250;
-            color:#19181A;
-        }
-
-        /* Exception for navigation buttons */
-        nav a {
-            background-color: transparent;
-            padding: 0;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin: 20px 0;
-        }
-
-
-        .nav-button {
-            background-color: #f3d250;
-            color: #19181A;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: bold;
-            transition: background-color 0.3s ease, transform 0.1s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .nav-button:hover {
-            background-color: #f1c40f;
-            transform: translateY(-2px);
-        }
-
-        .nav-button:active {
-            transform: translateY(0);
-        }
-
-        .nav-button::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(255, 255, 255, 0.2);
-            transform: translateX(-100%);
-            transition: transform 0.3s ease;
-        }
-
-        .nav-button:active::after {
-            transform: translateX(0);
-        }
-
-        nav a {
-            margin: 0;
-            text-decoration: none;
-            color: inherit;
-            font-weight: inherit;
-            cursor: inherit;
-        }
-
-
-        section {
-            margin: 20px auto;
-            max-width: 800px;
-            background: #2c2b2e;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
-            display: none; /* Initially hidden */
-            overflow: hidden; /* Ensure the content doesn't overflow */
-            transition: transform 0.4s ease-out; /* Add transition for transform */
-            transform: translateY(100%); /* Start off-screen at the bottom */
-            position: absolute; /* Position absolutely for stacking */
-            left: 0;
-            right: 0;
-        }
-
-        section.show {
-            display: flex; /* Show when active and use flexbox */
-            align-items: stretch; /* Stretch items to fill the container height */
-            transform: translateY(0); /* Slide in from the bottom */
-            position: relative; /* Reset position for active section */
-        }
-
-        section.hide {
-            transform: translateY(100%); /* Slide out to the top */
-        }
-
-
-
-
-
-        h2 {
-            color: #64b5f6;
-            margin-bottom: 10px;
-        }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        ul li {
-            margin-bottom: 10px;
-        }
-
-        footer {
-            position: absolute;
-    width: 100%;
-    height: fit-content;
-    background-color: #ffffff;
-            text-align: center;
-            padding: 10px;
-            background-color: #2c2b2e;
-            color: white;
-        }
-
-    </style>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sukesh Kootikanti | Portfolio</title>
-   
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
+    <header>
+        <h1>Sukesh Kootikanti</h1>
+    
 
-<header>
-    <h1>Sukesh Kootikanti</h1>
-    <p>Email: <a href="mailto:sukeshkootikanti@gmail.com">sukeshkootikanti@gmail.com</a> | 
-       LinkedIn: <a href="https://www.linkedin.com/in/sukeshkootikanti" target="_blank">sukeshkootikanti</a> | 
-       Phone: (+1) 513-413-7635</p>
-</header>
+        <button id="dark-mode-toggle">Toggle Dark Mode</button>
+        <nav>
+ <nav>
+     <button class="nav-button" onclick="changePage('about', event)"><i class="fas fa-user"></i> About Me</button>
+     <button class="nav-button" onclick="changePage('experience', event)"><i class="fas fa-briefcase"></i> Experience</button>
+     <button class="nav-button" onclick="changePage('projects', event)"><i class="fas fa-project-diagram"></i> Projects</button>
+     <button class="nav-button" onclick="changePage('skills', event)"><i class="fas fa-cogs"></i> Skills</button>
+     <button class="nav-button" onclick="changePage('education', event)"><i class="fas fa-graduation-cap"></i> Education</button>
+     <button class="nav-button" onclick="changePage('certifications', event)"><i class="fas fa-certificate"></i> Certifications</button>
+     <button class="nav-button" onclick="changePage('contact', event)"><i class="fas fa-envelope"></i> Contact Me</button>
+ </nav>
 
-<button id="dark-mode-toggle">Toggle Dark Mode</button>
-<nav>
-    <button class="nav-button" onclick="changePage('about', event)">About Me</button>
-    <button class="nav-button" onclick="changePage('experience', event)">Experience</button>
-    <button class="nav-button" onclick="changePage('projects', event)">Projects</button>
-    <button class="nav-button" onclick="changePage('skills', event)">Skills</button>
-    <button class="nav-button" onclick="changePage('education', event)">Education</button>
-    <button class="nav-button" onclick="changePage('certifications', event)">Certifications</button>
-</nav>
+    </header>
 
-
+    <main>
 
 
 <!-- Section 1: About Me -->
-<!-- Section 1: About Me -->
-<section id="about" class="page-section">
-    <div class="section-content">
-    <h2>About Me</h2>
-    <p>I am Sukesh Kootikanti, a Software Engineer with expertise in full-stack development, 
-        data analytics, and cloud technologies. Completed Master's in Information Technology at the University of Cincinnati with a GPA of 3.96/4. 
-        I am passionate about building efficient and innovative solutions</p>
+<section  style="background: #191f24;" id="about" class="page-section">
+    <div  class="section-container">
+        <div class="section-content">
+            <h2>About Me</h2>
+            <ul>
+            <li><strong>I am Sukesh Kootikanti, a Software Engineer with expertise in full-stack development,
+                data analytics, and cloud technologies.</strong></li><br> 
+            <li>Completed Master's in Information Technology at the University of Cincinnati with a GPA of 3.96/4.</li><br>
+            <li> I am passionate about building efficient and innovative solutions</li>
+            </ul>
+        </div>
+        <img src="aboutme.jpg" alt="About Me" class="section-image">
     </div>
-    <img width="400" height="400" src="aboutme.jpg" alt="About Me" class="section-image">
 </section>
+
+
 
 <!-- Section 2: Experience -->
-<section id="experience" class="page-section">
-    <div class="section-content">
-    <h2>Experience</h2>
-    <ul>
-        <li><strong>Software Engineer</strong> - <br> LTIMindtree (Nov 2021 - Aug 2023)<br>
-            Developed Lumin, a data analytics tool handling 130+ terabytes of data, improving efficiency by 37%...</li>
-            <br>
-        <li><strong>Graduate Engineer Trainee</strong> - <br> LTIMindtree (Jul 2021 - Nov 2021)<br>
-            Redesigned an e-commerce site using ReactJS, boosting conversion rates by 20%.</li>
-            <br>
-        <li><strong>Programmer Analyst Trainee</strong> - <br> Cognizant Technology Solutions (Jul 2020 - Jun 2021)<br>
-            Improved system performance by 30% through optimization and backend feature enhancements.</li>
-    </ul>
+<section style="background: #2787ba;" id="experience" class="page-section">
+    <div class="section-container">
+        <div class="section-content">
+            <h2>Experience</h2>
+            <ul>
+                <li><strong>Software Engineer</strong> - LTIMindtree (Nov 2021 - Aug 2023)<br>
+                    Developed Lumin, improving efficiency by 37%</li>
+                <li><strong>Graduate Engineer Trainee</strong> - LTIMindtree (Jul 2021 - Nov 2021)<br>
+                    Redesigned e-commerce site, boosting conversion by 20%</li>
+                <li><strong>Programmer Analyst Trainee</strong> - Cognizant (Jul 2020 - Jun 2021)<br>
+                    Improved system performance by 30%</li>
+            </ul>
+        </div>
+        <img src="experience.jpg" alt="Work Experience" class="section-image">
     </div>
-    <img height="400" width="400" src="experience.jpg" alt="Work Experience" class="section-image">
 </section>
 
+
+
 <!-- Section 3: Projects -->
-<section id="projects" class="page-section">
+<section style="background: #191f24;" id="projects" class="page-section">
+    <div class="section-container">
     <div class="section-content">
     <h2>Projects</h2>
     <ul>
@@ -281,22 +82,27 @@
     </ul>
     </div>
     <img width="400" height="400" src="project.jpg" class="section-image">
+</div>
 </section>
 
 <!-- Section 4: Skills -->
-<section id="skills" class="page-section">
-    <div class="section-content">
-    <h2>Skills</h2>
-    <p><strong>Programming Languages:</strong> <br>Java, C++, JavaScript, Python, SQL, NoSQL, PowerShell, HTML, CSS/SASS</p><br>
-    <p><strong>Frameworks:</strong> <br>ReactJS, Angular JS, NodeJS, Spring Boot, Django</p><br>
-    <p><strong>Cloud Platforms:</strong><br> AWS, Microsoft Azure, Google Cloud Platform</p><br>
-    <p><strong>Tools:</strong><br> GIT, GitLab, Visual Studio,IntelliJ, Eclipse</p>
+<section style="background: #2787ba;" id="skills" class="page-section">
+    <div class="section-container">
+        <div class="section-content">
+            <h2>Skills</h2>
+            <p><strong>Programming:</strong> Java, C++, JavaScript, Python, SQL, NoSQL</p>
+            <p><strong>Frameworks:</strong> ReactJS, Angular JS, NodeJS, Spring Boot, Django</p>
+            <p><strong>Cloud:</strong> AWS, Azure, Google Cloud Platform</p>
+            <p><strong>Tools:</strong> GIT, GitLab, Visual Studio, IntelliJ, Eclipse</p>
+        </div>
+        <img width="300" height="300" src="skill.png" alt="Skills" class="section-image">
     </div>
-    <img width="400" height="400" src="skill.png" alt="Skills" class="section-image">
 </section>
 
+
 <!-- Section 5: Education -->
-<section id="education" class="page-section">
+<section style="background: #191f24;" id="education" class="page-section">
+    <div class="section-container">
     <div class="section-content">
     <h2>Education</h2>
     <p><strong>University of Cincinnati</strong> -<br> Master's in Information Technology (Aug 2023 - Dec 2024)<br>
@@ -304,10 +110,12 @@
     <p><strong>Relevant Courses:</strong> <br>Mobile Apps, HCI & Usability, Advanced Algorithms, Machine Learning, Data Engineering.</p>
         </div>
     <img width="400" height="400" src="education.jpg" alt="Education" class="section-image">
+    </div>
 </section>
 
 <!-- Section 6: Certifications -->
-<section id="certifications" class="page-section">
+<section style="background: #2787ba;" id="certifications" class="page-section">
+    <div class="section-container">
     <div class="section-content">
     <h2>Certifications</h2>
     <ul>
@@ -317,15 +125,48 @@
         <li>Java Standard Edition</li>
     </ul>
     </div>
-    <img width="400" height="400" src="certificates.jpeg" alt="Certifications" class="section-image">
+    <img src="certificates.jpeg" alt="Certifications" class="section-image">
+</div>
 </section>
-
+<!-- Section 7: Contact Me -->
+<section style="background: #191f24;" id="contact" class="page-section">
+    <div class="section-container">
+        <div class="section-content">
+            <h2>Contact Me</h2>
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </div>
+</section>
+</main>
 
 <footer>
+    <p>
+        <a href="mailto:sukeshkootikanti@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a> | 
+        <a href="https://www.linkedin.com/in/sukeshkootikanti" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+    </p>
     <p>&copy; 2024 Sukesh Kootikanti. All Rights Reserved.</p>
 </footer>
 
 <script>
+
     // Function to change pages with slide transition
     function changePage(sectionId, isInitialLoad = false) {
         const sections = document.querySelectorAll('.page-section');
@@ -337,7 +178,7 @@
             clickedButton.classList.add('clicked');
             setTimeout(() => {
                 clickedButton.classList.remove('clicked');
-            }, 300);
+            }, 700);
         }
 
         // Hide all sections
@@ -377,7 +218,31 @@
     if (localStorage.getItem('darkMode') === 'true') {
         body.classList.add('dark-mode');
     }
+
+    // Handle form submission
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        // Get form values
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const subject = document.getElementById('subject').value;
+        const message = document.getElementById('message').value;
+
+        // Construct mailto link
+        const mailtoLink = `mailto:sukeshkootikanti@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
+
+        // Open default email client
+        window.location.href = mailtoLink;
+
+        // Reset form
+        this.reset();
+
+        // Show confirmation message
+        alert('Thank you for your message. Your email client should now open with the prepared email.');
+    });
 </script>
+
 
 
 
