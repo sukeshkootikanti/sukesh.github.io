@@ -127,6 +127,7 @@ main {
         color: #19181A;
         border: none;
         text-align: center;
+        margin-top:10px;
         padding: 10px 30px;
         border-radius: 5px;
         cursor: pointer;
