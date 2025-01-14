@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sukesh Kootikanti | Portfolio</title>
+    <script src="script.js"></script>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -32,84 +33,194 @@
 
 <!-- Section 1: About Me -->
 <section id="about" class="page-section">
-    <div  class="section-container">
+    <div class="section-container">
         <div class="section-content">
-            <h2>About Me</h2>
-            <ul>
-            <li><strong>I am Sukesh Kootikanti, a Software Engineer with expertise in full-stack development,
-                data analytics, and cloud technologies.</strong></li><br> 
-            <li>Completed Master's in Information Technology at the University of Cincinnati with a GPA of 3.96/4.</li><br>
-            <li> I am passionate about building efficient and innovative solutions</li>
-            </ul>
+            <h2 class="animated-title">About Me</h2>
+            <div class="about-me-content">
+                <div class="about-me-text fade-in">
+                    <p><strong>Hello! I'm Sukesh Kootikanti,</strong> a passionate Software Engineer specializing in full-stack development, data analytics, and cloud technologies.</p>
+                    <p>I recently completed my Master's in Information Technology at the University of Cincinnati with an outstanding GPA of 3.96/4.</p>
+                    <p>My journey in tech is driven by a desire to create efficient and innovative solutions that make a real impact.</p>
+                </div>
+                <div class="about-me-details fade-in">
+                    <h3>Quick Facts:</h3>
+                    <ul class="interactive-list">
+                        <li class="fact-item slide-in" onclick="toggleFact(this)">
+                            <i class="fas fa-code"></i>
+                            <span>Full-stack Developer</span>
+                            <p class="fact-details">Proficient in both front-end and back-end technologies, creating seamless user experiences.</p>
+                        </li>
+                        <li class="fact-item slide-in" onclick="toggleFact(this)">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Data Analytics Enthusiast</span>
+                            <p class="fact-details">Passionate about turning raw data into meaningful insights for informed decision-making.</p>
+                        </li>
+                        <li class="fact-item slide-in" onclick="toggleFact(this)">
+                            <i class="fas fa-cloud"></i>
+                            <span>Cloud Technology Expert</span>
+                            <p class="fact-details">Experienced in leveraging cloud platforms to build scalable and robust applications.</p>
+                        </li>
+                        <li class="fact-item slide-in" onclick="toggleFact(this)">
+                            <i class="fas fa-lightbulb"></i>
+                            <span>Innovative Problem Solver</span>
+                            <p class="fact-details">Always looking for creative solutions to complex technical challenges.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <img src="aboutme.jpg" alt="About Me" class="section-image">
+        <img src="aboutme.jpg" alt="About Me" class="section-image fade-in">
     </div>
 </section>
+
+
 
 
 
 <!-- Section 2: Experience -->
+<!-- Section 2: Experience -->
 <section id="experience" class="page-section">
     <div class="section-container">
-        <div class="section-content">
+        <div class="section-content full-width">
             <h2>Experience</h2>
-            <ul>
-                <li><strong>Software Engineer</strong> - LTIMindtree (Nov 2021 - Aug 2023)<br>
-                    Developed Lumin, improving efficiency by 37%</li>
-                <li><strong>Graduate Engineer Trainee</strong> - LTIMindtree (Jul 2021 - Nov 2021)<br>
-                    Redesigned e-commerce site, boosting conversion by 20%</li>
-                <li><strong>Programmer Analyst Trainee</strong> - Cognizant (Jul 2020 - Jun 2021)<br>
-                    Improved system performance by 30%</li>
-            </ul>
+            <div class="experience-timeline">
+                <div class="experience-card">
+                    <h3>Software Engineer - LTIMindtree</h3>
+                    <p>Developed Lumin, improving efficiency by 37%</p>
+                    <p class="year">Nov 2021 - Aug 2023</p>
+                    <div class="details">
+                        <p>• Led a team of 5 developers to create and implement Lumin, a cutting-edge project management tool</p>
+                        <p>• Utilized React and Node.js to build a responsive and efficient front-end interface</p>
+                        <p>• Implemented agile methodologies, resulting in a 37% increase in team productivity</p>
+                    </div>
+                </div>
+
+                <div class="experience-card">
+                    <h3>Graduate Engineer Trainee - LTIMindtree</h3>
+                    <p>Redesigned e-commerce site, boosting conversion by 20%</p>
+                    <p class="year">Jul 2021 - Nov 2021</p>
+                    <div class="details">
+                        <p>• Collaborated with UX designers to revamp the user interface of a major e-commerce platform</p>
+                        <p>• Implemented responsive design principles, ensuring seamless experience across devices</p>
+                        <p>• Optimized site performance, leading to a 20% increase in conversion rates</p>
+                    </div>
+                </div>
+
+                <div class="experience-card">
+                    <h3>Programmer Analyst Trainee - Cognizant</h3>
+                    <p>Improved system performance by 30%</p>
+                    <p class="year">Jul 2020 - Jun 2021</p>
+                    <div class="details">
+                        <p>• Participated in the development of a large-scale banking application</p>
+                        <p>• Optimized database queries and implemented caching strategies</p>
+                        <p>• Contributed to a 30% improvement in overall system performance</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <img src="experience.jpg" alt="Work Experience" class="section-image">
     </div>
 </section>
+
+
+
+
+
 
 
 
 <!-- Section 3: Projects -->
+<!-- Section 3: Projects -->
 <section id="projects" class="page-section">
     <div class="section-container">
-    <div class="section-content">
-    <h2>Projects</h2>
-    <ul>
-        <li><strong>Interpreting CNNs for Image Classification:</strong><br> Visualized and analyzed CNN features for improved classification accuracy.</li><br>
-        <li><strong>Blockchain Cryptocurrency Simulation:</strong><br> Built with React and Python, reduced transaction errors by 25%.</li><br>
-        <li><strong>React Mobile App:</strong> <br>Optimized a multi-page mobile app, reducing page load time by 15%.</li>
-    </ul>
+        <div class="section-content">
+            <h2>Projects</h2>
+            <div class="project-cards">
+                <div class="project-card">
+                    <h3>Interpreting CNNs for Image Classification</h3>
+                    <p>Visualized and analyzed CNN features for improved classification accuracy, enhancing model interpretability and performance.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Blockchain Cryptocurrency Simulation</h3>
+                    <p>Built with React and Python, this simulation reduced transaction errors by 25% and provided a realistic cryptocurrency trading environment.</p>
+                </div>
+                <div class="project-card">
+                    <h3>React Mobile App</h3>
+                    <p>Optimized a multi-page mobile app, reducing page load time by 15% and improving overall user experience with smooth navigation.</p>
+                </div>
+                <div class="project-card">
+                    <h3>AI-Powered Chatbot</h3>
+                    <p>Developed an intelligent chatbot using natural language processing, capable of handling customer queries with 90% accuracy.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Interpreting CNNs for Image Classification</h3>
+                    <p>Visualized and analyzed CNN features for improved classification accuracy, enhancing model interpretability and performance.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Interpreting CNNs for Image Classification</h3>
+                    <p>Visualized and analyzed CNN features for improved classification accuracy, enhancing model interpretability and performance.</p>
+                </div>
+            </div>
+        </div>
     </div>
-    <img width="400" height="400" src="project.jpg" class="section-image">
-</div>
 </section>
+
 
 <!-- Section 4: Skills -->
 <section  id="skills" class="page-section">
     <div  class="section-container">
-        <div class="section-content">
+        <div class="section-content full-width">
             <h2>Skills</h2>
-            <p><strong>Programming:</strong> Java, C++, JavaScript, Python, SQL, NoSQL</p>
-            <p><strong>Frameworks:</strong> ReactJS, Angular JS, NodeJS, Spring Boot, Django</p>
-            <p><strong>Cloud:</strong> AWS, Azure, Google Cloud Platform</p>
-            <p><strong>Tools:</strong> GIT, GitLab, Visual Studio, IntelliJ, Eclipse</p>
+            <div class="skill-cards">
+                <div class="skill-card">
+                    <h3>Programming:</h3>
+                    <p> Java, C++, JavaScript, Python, SQL, NoSQL</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Frameworks:</h3>
+                    <p> ReactJS, Angular JS, NodeJS, Spring Boot, Django</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Cloud:</h3>
+                    <p>  AWS, Azure, Google Cloud Platform</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Tools:</h3>
+                    <p> GIT, GitLab, Visual Studio, IntelliJ, Eclipse</p>
+                </div>
         </div>
-        <img width="300" height="300" src="skill.png" alt="Skills" class="section-image">
     </div>
 </section>
 
 
 <!-- Section 5: Education -->
-<section  id="education" class="page-section">
+<section id="education" class="page-section">
     <div class="section-container">
-    <div class="section-content">
-    <h2>Education</h2>
-    <p><strong>University of Cincinnati</strong> -<br> Master's in Information Technology (Aug 2023 - Dec 2024)<br>
-    GPA: 3.96/4</p><br>
-    <p><strong>Relevant Courses:</strong> <br>Mobile Apps, HCI & Usability, Advanced Algorithms, Machine Learning, Data Engineering.</p>
+        <div class="section-content">
+            <h2 class="animated-title">Education</h2>
+            <div class="education-card">
+                <div class="education-header">
+                    <img src="uc-logo.jpg" alt="University of Cincinnati Logo" class="university-logo">
+                    <h3>University of Cincinnati</h3>
+                </div>
+                <p class="degree">Master's in Information Technology</p>
+                <p class="duration">Aug 2023 - Dec 2024</p>
+                <p class="gpa">GPA: <span class="highlight">3.96/4</span></p>
+                <div class="courses">
+                    <h4>Relevant Courses:</h4>
+                    <ul class="course-list">
+                        <li>Mobile Apps</li>
+                        <li>HCI & Usability</li>
+                        <li>Advanced Algorithms</li>
+                        <li>Machine Learning</li>
+                        <li>Data Engineering</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-    <img width="400" height="400" src="education.jpg" alt="Education" class="section-image">
+        <img src="education.jpg" alt="Education" class="section-image floating-image">
     </div>
 </section>
+
 
 <!-- Section 6: Certifications -->
 <section id="certifications" class="page-section">
@@ -160,87 +271,5 @@
     </p>
     <p style="margin:0px;">&copy; 2024 Sukesh Kootikanti. All Rights Reserved.</p>
 </footer>
-
-<script>
-
-    // Function to change pages with slide transition
-    function changePage(sectionId, isInitialLoad = false) {
-        const sections = document.querySelectorAll('.page-section');
-        const selectedPage = document.getElementById(sectionId);
-        const clickedButton = isInitialLoad ? document.querySelector(`[onclick="changePage('${sectionId}', event)"]`) : event.currentTarget;
-
-        // Add slide-in effect to the clicked button
-        if (!isInitialLoad) {
-            clickedButton.classList.add('clicked');
-            setTimeout(() => {
-                clickedButton.classList.remove('clicked');
-            }, 700);
-        }
-
-        // Hide all sections
-        sections.forEach(section => {
-            section.classList.remove('show');
-            section.style.display = 'none';
-        });
-
-        // Show the selected section
-        selectedPage.style.display = 'flex';
-        setTimeout(() => {
-            selectedPage.classList.add('show');
-        }, 20);
-
-        // Update active button state
-        document.querySelectorAll('.nav-button').forEach(btn => btn.classList.remove('active'));
-        clickedButton.classList.add('active');
-        // Scroll to the top of the page
-        window.scrollTo(0, 0);
-    }
-
-    // Initialize the first page as visible
-    document.addEventListener("DOMContentLoaded", function() {
-        changePage('about', true); // Show "About Me" section by default
-    });
-
-    // Dark mode toggle functionality
-    const darkModeToggle = document.getElementById('dark-mode-toggle');
-    const body = document.body;
-
-    darkModeToggle.addEventListener('click', () => {
-        body.classList.toggle('dark-mode');
-        localStorage.setItem('darkMode', body.classList.contains('dark-mode'));
-    });
-
-    // Check for saved dark mode preference
-    if (localStorage.getItem('darkMode') === 'true') {
-        body.classList.add('dark-mode');
-    }
-
-    // Handle form submission
-    document.getElementById('contact-form').addEventListener('submit', function(e) {
-        e.preventDefault();
-
-        // Get form values
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const subject = document.getElementById('subject').value;
-        const message = document.getElementById('message').value;
-
-        // Construct mailto link
-        const mailtoLink = `mailto:sukeshkootikanti@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
-
-        // Open default email client
-        window.location.href = mailtoLink;
-
-        // Reset form
-        this.reset();
-
-        // Show confirmation message
-        alert('Thank you for your message. Your email client should now open with the prepared email.');
-    });
-</script>
-
-
-
-
 </body>
 </html>
