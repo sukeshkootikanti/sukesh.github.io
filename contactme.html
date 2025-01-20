@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Sukesh Kootikanti | Contact Me</title>
+            <script src="script.js"></script>
+            <link rel="stylesheet" href="formstyles.css">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+            <style>
+                header {
+                    background-color: #191f24;
+                    padding: 20px 0;
+                    width: 100%;
+                }
+                nav {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    max-width: 1200px;
+                    margin: 0 auto;
+                    padding: 0 20px;
+                }
+                .name {
+                    color: #fff;
+                    font-size: 24px;
+                    margin: 0;
+                }
+                .nav-button {
+                    background-color: transparent;
+                    border: none;
+                    color: #fff;
+                    cursor: pointer;
+                    font-size: 16px;
+                    margin-left: 20px;
+                    padding: 10px;
+                    transition: color 0.3s ease;
+                }
+                .nav-button:hover {
+                    color: #f34079;
+                }
+                body {
+                    margin: 0;
+                    padding: 0;
+                    display: flex;
+                    flex-direction: column;
+                    min-height: 100vh;
+                }
+                .container {
+                    flex: 1;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 50px 0;
+                }
+            </style>
+        </head>
+    
+        <body>
+            <header>
+                <nav>
+                    <h2 class="name">Sukesh Kootikanti</h2>
+                    <div>
+                        <button class="nav-button" onclick="window.location.href='index.html'"><i class="fas fa-home"></i> Home</button>
+                        <button class="nav-button" onclick="window.location.href='index.html#about'"><i class="fas fa-user"></i> About</button>
+                        <button class="nav-button" onclick="window.location.href='index.html#experience'"><i class="fas fa-briefcase"></i> Experience</button>
+                        <button class="nav-button" onclick="window.location.href='index.html#projects'"><i class="fas fa-project-diagram"></i> Projects</button>
+                        <button class="nav-button" onclick="window.location.href='index.html#education'"><i class="fas fa-graduation-cap"></i> Education</button>
+                    </div>
+                </nav>
+            </header>
+
+
+<div class="container">
+  <div class="form-container">
+    <div class="left-container">
+      <div class="left-inner-container">
+      <h2>Let's Chat</h2>
+      <p>Whether you have a question, want to start a project or            simply want to connect.</p>
+        <br>
+        <p>Feel free to send me a message in the contact form</p>
+    </div>
+      </div>
+    <div class="right-container">
+      <div class="right-inner-container">
+        <form action="#">
+			<h2 class="lg-view">Contact</h2>
+      <h2 class="sm-view">Let's Chat</h2>
+			<div class="social-container">
+				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+			</div>
+          <input type="text" placeholder="Name *"  />
+      <input type="email" placeholder="Email *" />
+			<input type="text" placeholder="Subject" />
+          <textarea rows="4" placeholder="Message"></textarea>
+            <button type="button" class="button-75" role="button"><span class="text">Submit</span></button>
+		</form>
+      </div>
+    </div>
+  </div>
+</div>

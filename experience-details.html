@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience Details | Sukesh Kootikanti</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="script.js"></script>
+    <style>
+        .experience-details {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .experience-details h2 {
+            color: #3a312b;
+            margin-bottom: 20px;
+        }
+        .experience-details ul {
+            padding-left: 20px;
+        }
+        .experience-details li {
+            margin-bottom: 10px;
+        }
+
+
+
+.button-75 {
+    align-items: center;
+    background-image: linear-gradient(135deg, #f34079 40%, #fc894d);
+    border: 0;
+    border-radius: 10px;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    font-family: "Codec cold",sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    height: 54px;
+    justify-content: center;
+    letter-spacing: .4px;
+    line-height: 1;
+    max-width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 3px;
+    text-decoration: none;
+    text-transform: uppercase;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .button-75:active {
+    outline: 0;
+  }
+  
+  .button-75:hover {
+    outline: 0;
+  }
+  
+  .button-75 span {
+    transition: all 200ms;
+  }
+  
+  .button-75:hover span {
+    transform: scale(.9);
+    opacity: .75;
+  }
+         
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h2 class="name">Sukesh Kootikanti</h2>
+        </nav>
+    </header>
+
+    <main>
+        <div class="experience-details" id="experienceContent">
+            <!-- Content will be dynamically inserted here -->
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const company = urlParams.get('company');
+            const role = urlParams.get('role');
+
+            const experienceContent = document.getElementById('experienceContent');
+
+            if (company === 'LTIMindtree' && role === 'Software Engineer') {
+                experienceContent.innerHTML = `
+                    <h2>Software Engineer - LTIMindtree</h2>
+                    <ul>
+                        <li>Redesigned an LTIMindtree's On-boarding website with AngularJS, integrating advanced search, faster incremental builds and filtering capabilities; achieved a reduced uploading file time by 15% and a 20% rise in loading rates. </li>
+                        <li>Developed a SPA web Application: A Data Analytics Tool with 8 months of development, 7 core team members, 15+ features, and a 130+ terabyte data handling capacity.</li>
+                        <li>Collaborated with 15+ clients to define solution requirements and conducted comprehensive user training sessions; improved customer satisfaction scores by 25% and decline in support tickets by 40% in 6 months.</li>
+                        <li>Increased daily operational efficiency by 37% and cost savings of more than 24%.</li>
+                        <li>Technologies Involved: AngularJS framework, Java for 12 back-end APIs, and Python & PowerShell for 45+ scripts Engaged with internal stakeholders and agile software development life cycle partners to ensure alignment on
+                                software design and project milestones, resulting in a 30% reduction in time-to-market for new features and leading to a 20% increase in project delivery speed.</li>
+                        <li>Participated in 1-2 daily stand-ups and Software Development Life Cycle (SDLC) sprint planning per week, contributing to a 20% reduction in project delivery time over a 4-month period.</li>
+                    </ul>
+                `;
+            } else if (company === 'LTIMindtree' && role === 'Graduate engineer trainee') {
+                experienceContent.innerHTML = `
+                    <h2>Graduate Engineer Trainee - LTIMindtree </h2>
+                    <ul>
+                        <li>Trained on 11 different DevOps and Full Stack courses such as Networking, Windows, Linux, Java, Advanced Java, JavaScript, Python, MySQL, MongoDB, PowerShell.</li>
+                        <li>Redesigned an e-commerce website with ReactJS, integrating advanced search and filtering capabilities; achieved a reduced cart abandonment rate by 15% and a 20% rise in conversion rates within four months.</li>
+                        <li>Participated in 1-2 daily stand-ups and Software Development Life Cycle (SDLC) sprint planning per week, contributing to a 20% reduction in project delivery time over a 4-month period.</li>
+                    </ul>
+                `;
+            } else if (company === 'Cognizant' && role === 'Programmer Analyst') {
+                experienceContent.innerHTML = `
+                    <h2>Programmer Analyst - Cognizant</h2>
+                    <ul>
+                        <li>Trained on 11 different DevOps and Full Stack courses such as Networking, Windows, Linux, Java, Advanced Java, JavaScript, Python, MySQL, MongoDB, PowerShell.
+                        <li>Application Development & Maintenance Unit manages the design of 25+ web pages, handling midsize projects.
+                        <li>Created and launched high-performance web applications using Spring MVC and Spring Boot; increased user engagement by 40% and brought down server response time by 30%.
+                        <li>Contributed to the enhancement and optimization of 5+ key backend software features, leading to a 30% improvement in system performance as measured by post-implementation surveys</li>
+                    </ul>
+                `;
+            } else {
+                experienceContent.innerHTML = '<p>Experience details not found.</p>';
+            }
+
+            experienceContent.innerHTML += '<button type="button" class="button-75" role="button" onclick="ExperiencePage()"><span class="text">Back to Experience</span></button></a>';
+
+            
+        });
+    </script>
+</body>
+</html>

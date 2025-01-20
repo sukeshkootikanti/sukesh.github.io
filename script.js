@@ -1,3 +1,18 @@
+function contactmePage() {
+    // Specify the URL of the page you want to go to
+    window.location.href = "contactme.html";  // Change this to your desired URL
+}
+
+function HomePage() {
+    // Specify the URL of the page you want to go to
+    window.location.href = "index.html";  // Change this to your desired URL
+}
+
+function ExperiencePage() {
+    // Specify the URL of the page you want to go to
+    window.location.href = "index.html#experience";  // Change this to your desired URL
+}
+
 // Function to change pages with slide transition
 function changePage(sectionId, event) {
     const sections = document.querySelectorAll('.page-section');
@@ -56,22 +71,6 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-// Dark mode toggle functionality
-const darkModeToggle = document.getElementById('dark-mode-toggle');
-const body = document.body;
-
-if (darkModeToggle) {
-    darkModeToggle.addEventListener('click', () => {
-        body.classList.toggle('dark-mode');
-        localStorage.setItem('darkMode', body.classList.contains('dark-mode'));
-    });
-
-    // Check for saved dark mode preference
-    if (localStorage.getItem('darkMode') === 'true') {
-        body.classList.add('dark-mode');
-    }
-}
-
 // Handle form submission
 document.getElementById('contact-form').addEventListener('submit', function(e) {
     e.preventDefault();
@@ -95,13 +94,30 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
     alert('Thank you for your message. Your email client should now open with the prepared email.');
 });
 
-function toggleFact(element) {
-    element.classList.toggle('active');
-}
 
 document.addEventListener("DOMContentLoaded", function() {
 const factItems = document.querySelectorAll('.fact-item');
 factItems.forEach((item, index) => {
     item.style.animationDelay = `${index * 0.1}s`;
 });
+});
+
+
+// Add this function to your existing script.js file
+function showExperienceDetails(company, role) {
+    // You can use these parameters to load specific content for each experience
+    window.location.href = `experience-details.html?company=${encodeURIComponent(company)}&role=${encodeURIComponent(role)}`;
+}
+
+// Update the existing code that adds event listeners to the "Know More" buttons
+document.addEventListener("DOMContentLoaded", function() {
+    const knowMoreButtons = document.querySelectorAll('.know-more-button');
+    knowMoreButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const card = this.closest('.experience-card');
+            const company = card.querySelector('h3').textContent.split('-')[1].trim();
+            const role = card.querySelector('h3').textContent.split('-')[0].trim();
+            showExperienceDetails(company, role);
+        });
+    });
 });

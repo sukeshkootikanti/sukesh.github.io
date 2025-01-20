@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+* {
+  box-sizing:border-box;
+  margin:0;
+}
+
+body {
+	background:white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-family: 'Montserrat', sans-serif;
+  font-size:10px;
+	height: 100vh;
+	margin: -20px 0 50px;
+}
+
+.container {
+	background-color: white;
+	border-radius: 5px;
+  	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+			0 10px 10px rgba(0,0,0,0.22);
+	position: relative;
+	overflow: hidden;
+	width: 768px;
+	max-width: 100%;
+	min-height: 480px;
+  min-width:370px;
+}
+
+h2 {
+  font-size:2rem;
+  margin-bottom:1rem;
+  background: linear-gradient(135deg, #f34079 40%, #fc894d);
+    -webkit-background-clip: text;
+            background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.form-container {
+  display:flex;
+}
+
+.left-container {
+  flex:1;
+  height:480px;
+  background-color:#191f24;
+}
+.right-container {
+  display:flex;
+  flex:1;
+  height:460px;
+  background-color: white;
+  justify-content:center;
+  align-items:center;
+}
+
+.left-container {
+  display:flex;
+  flex:1;
+  height:480px;
+  justify-content:center;
+  align-items:center;
+    color:white;
+}
+
+.left-container p {
+  font-size:0.9rem;
+}
+
+.right-inner-container {
+  width:70%;
+  height:80%;
+  text-align:center;
+}
+
+.left-inner-container {
+  height:50%;
+  width:80%;
+  text-align:center;
+  line-height:22px;
+}
+
+input, textarea {
+	background-color: #eee;
+	border: 2px;
+	padding: 20px;
+	margin: 8px 10px;
+	width: 100%;
+  font-size:0.8rem;
+}
+
+input:focus, textarea:focus{
+    background-color:lightgray;
+    color:white;
+    border-style: outset;
+}
+
+button {
+	border-radius: 20px;
+	background-color:#191f24;
+	color:white;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+  cursor:pointer;
+}
+
+button:hover {
+  opacity:0.7;
+}
+@media only screen and (max-width: 600px) {
+  .left-container{
+    display: none;
+  }
+  .lg-view {
+    display:none;  
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .sm-view {
+    display:none;  
+  }
+}
+
+form p {
+  text-align:left;
+}
+
+
+/* CSS */
+.button-75 {
+  align-items: center;
+  background-image: linear-gradient(135deg, #f34079 40%, #fc894d);
+  border: 0;
+  border-radius: 10px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  font-family: "Codec cold",sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  height: 54px;
+  justify-content: center;
+  letter-spacing: .4px;
+  line-height: 1;
+  max-width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 3px;
+  text-decoration: none;
+  text-transform: uppercase;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-75:active {
+  outline: 0;
+}
+
+.button-75:hover {
+  outline: 0;
+}
+
+.button-75 span {
+  transition: all 200ms;
+}
+
+.button-75:hover span {
+  transform: scale(.9);
+  opacity: .75;
+}
+
+@media screen and (max-width: 991px) {
+  .button-75 {
+    font-size: 15px;
+    height: 50px;
+  }
+
+  .button-75 span {
+    line-height: 50px;
+  }
+}
