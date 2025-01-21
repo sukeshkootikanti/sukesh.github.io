@@ -8,65 +8,16 @@
             <link rel="stylesheet" href="formstyles.css">
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-            <style>
-                header {
-                    background-color: #191f24;
-                    padding: 20px 0;
-                    width: 100%;
-                }
-                nav {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    max-width: 1200px;
-                    margin: 0 auto;
-                    padding: 0 20px;
-                }
-                .name {
-                    color: #fff;
-                    font-size: 24px;
-                    margin: 0;
-                }
-                .nav-button {
-                    background-color: transparent;
-                    border: none;
-                    color: #fff;
-                    cursor: pointer;
-                    font-size: 16px;
-                    margin-left: 20px;
-                    padding: 10px;
-                    transition: color 0.3s ease;
-                }
-                .nav-button:hover {
-                    color: #f34079;
-                }
-                body {
-                    margin: 0;
-                    padding: 0;
-                    display: flex;
-                    flex-direction: column;
-                    min-height: 100vh;
-                }
-                .container {
-                    flex: 1;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    padding: 50px 0;
-                }
-            </style>
         </head>
     
         <body>
             <header>
                 <nav>
-                    <h2 class="name">Sukesh Kootikanti</h2>
-                    <div>
-                        <button class="nav-button" onclick="window.location.href='index.html'"><i class="fas fa-home"></i> Home</button>
-                        <button class="nav-button" onclick="window.location.href='index.html#about'"><i class="fas fa-user"></i> About</button>
-                        <button class="nav-button" onclick="window.location.href='index.html#experience'"><i class="fas fa-briefcase"></i> Experience</button>
-                        <button class="nav-button" onclick="window.location.href='index.html#projects'"><i class="fas fa-project-diagram"></i> Projects</button>
-                        <button class="nav-button" onclick="window.location.href='index.html#education'"><i class="fas fa-graduation-cap"></i> Education</button>
+                    <div class="header-container">
+                        <h2 class="name">Sukesh Kootikanti</h2>
+                        <div class="nav-buttons">
+                            <button class="nav-button" onclick="window.location.href='index.html'"><i class="fas fa-home"></i> Home</button>
+                        </div>
                     </div>
                 </nav>
             </header>

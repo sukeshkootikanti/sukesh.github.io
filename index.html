@@ -15,19 +15,20 @@
 
 <body>
     <header>
-      <!--  <h1>Sukesh Kootikanti</h1> -->
-     <!--  <button id="dark-mode-toggle">Toggle Dark Mode</button>-->
         <nav>
- <nav>
-     <h2 class="name">Sukesh Kootikanti</h2>
-     <button class="nav-button" onclick="changePage('about', event)"><i class="fas fa-home"></i> Home</button>
-     <button class="nav-button" onclick="changePage('experience', event)"><i class="fas fa-briefcase"></i> Experience</button>
-     <button class="nav-button" onclick="changePage('projects', event)"><i class="fas fa-project-diagram"></i> Projects</button>
-     <button class="nav-button" onclick="changePage('education', event)"><i class="fas fa-graduation-cap"></i> Education</button>
-     <button class="nav-button" onclick="contactmePage()"><i class="fas fa-envelope"></i> Contact Me</button>
- </nav>
-
+            <div class="header-container">
+                <h2 class="name">Sukesh Kootikanti</h2>
+                <div class="nav-buttons">
+                    <button class="nav-button" onclick="changePage('about', event)"><i class="fas fa-home"></i> Home</button>
+                    <button class="nav-button" onclick="changePage('experience', event)"><i class="fas fa-briefcase"></i> Experience</button>
+                    <button class="nav-button" onclick="changePage('projects', event)"><i class="fas fa-project-diagram"></i> Projects</button>
+                    <button class="nav-button" onclick="changePage('education', event)"><i class="fas fa-graduation-cap"></i> Education</button>
+                    <button class="nav-button" onclick="contactmePage()"><i class="fas fa-envelope"></i> Contact Me</button>
+                </div>
+            </div>
+        </nav>
     </header>
+
 
     <main>
 
@@ -137,8 +138,8 @@
                     <p>Designed and implemented a multi-page Angular application optimized for mobile devices, including redirections and minifying javascript, which led to a 15% reduction in page load time.</p>
                 </div>
                 <div class="project-card">
-                    <h3>Interpreting CNNs for Image Classification</h3>
-                    <p>Visualized and analyzed CNN features for improved classification accuracy, enhancing model interpretability and performance.</p>
+                    <h3>Inventory Management</h3>
+                    <p>E-commerce application developed using Python, Django and Flask.</p>
                 </div>
             </div>
         </div>
