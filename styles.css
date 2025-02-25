@@ -1220,4 +1220,76 @@ body {
   }
 
 
+
+@media (max-width: 768px) {
+    .section-container {
+        flex-direction: column;
+    }
+
+    .section-content {
+        max-width: 100%;
+        padding-right: 0;
+    }
+
+    .section-image {
+        width: 100%;
+        height: auto;
+        max-height: 300px;
+        margin-top: 20px;
+        position: static;
+    }
+}
+@media (max-width: 768px) {
+    .project-cards {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .project-card {
+        width: 100%;
+        margin-right: 0;
+    }
+}@media (max-width: 768px) {
+    .experience-container {
+        flex-direction: column;
+    }
+
+    .experience-card {
+        width: 100%;
+        margin-right: 0;
+    }
+}@media (max-width: 768px) {
+    #education .section-container {
+        flex-direction: column;
+    }
+
+    .education-card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}@media (max-width: 768px) {
+    .skill-cards {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .skill-card {
+        width: 100%;
+    }
+}@media (max-width: 768px) {
+    section {
+        padding: 10px;
+    }
+
+    .section-content {
+        padding-right: 10px;
+    }
+
+    .project-card,
+    .experience-card,
+    .education-card,
+    .skill-card {
+        padding: 15px;
+    }
+}
   
