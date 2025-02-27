@@ -860,7 +860,6 @@ footer {
 
 .about-me-text, .about-me-details {
     flex: 1;
-    min-width: 300px;
 }
 
 .interactive-list {
