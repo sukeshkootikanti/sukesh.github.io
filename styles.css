@@ -724,10 +724,23 @@ footer {
     gap: 30px;
 }
 
+.aboutme-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    margin-right:250px;
+    padding: 20px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+overflow: hidden;
+}
+
 .about-me-text, .about-me-details {
     background-color: rgba(255, 255, 255, 0.05);
     border-radius: 10px;
-    padding: 12px;
+    padding: 25px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
