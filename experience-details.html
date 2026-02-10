@@ -102,44 +102,53 @@
                 experienceContent.innerHTML = `
                     <h2>Software Engineer - LTIMindtree</h2>
                     <ul>
-                        <li>Redesigned an LTIMindtree's On-boarding website with AngularJS, integrating advanced search, faster incremental builds and filtering capabilities; achieved a reduced uploading file time by 15% and a 20% rise in loading rates. </li>
-                        <li>Developed a SPA web Application: A Data Analytics Tool with 8 months of development, 7 core team members, 15+ features, and a 130+ terabyte data handling capacity.</li>
-                        <li>Collaborated with 15+ clients to define solution requirements and conducted comprehensive user training sessions; improved customer satisfaction scores by 25% and decline in support tickets by 40% in 6 months.</li>
-                        <li>Increased daily operational efficiency by 37% and cost savings of more than 24%.</li>
-                        <li>Technologies Involved: AngularJS framework, Java for 12 back-end APIs, and Python & PowerShell for 45+ scripts Engaged with internal stakeholders and agile software development life cycle partners to ensure alignment on
-                                software design and project milestones, resulting in a 30% reduction in time-to-market for new features and leading to a 20% increase in project delivery speed.</li>
-                        <li>Participated in 1-2 daily stand-ups and Software Development Life Cycle (SDLC) sprint planning per week, contributing to a 20% reduction in project delivery time over a 4-month period.</li>
+                        <li>Built and maintained backend services using C#/.NET Core and Java on Microsoft Azure, supporting enterprise-scale, transaction-heavy applications.</li>
+                        <li>Developed cloud-based integrations using Azure Functions and REST APIs to support data ingestion, validation, and downstream processing.</li>
+                        <li>Designed and optimized relational database schemas and SQL queries, improving query performance by 25–35% for compliance-sensitive reporting and reconciliation use cases.</li>
+                        <li>Deployed and supported applications in Azure-hosted environments, working with CI/CD pipelines to enable reliable releases and faster issue resolution.</li>
+                        <li>Collaborated with cross-functional teams to triage production issues, perform root-cause analysis, and deliver fixes in an agile SDLC environment.</li>
+                        <li>Supported systems operating in regulated enterprise contexts, emphasizing reliability, auditability, and controlled change management.</li>
                     </ul>
                 `;
             } else if (company === 'Uber' && role === 'Software Engineer') {
                 experienceContent.innerHTML = `
                     <h2>Software Engineer - Uber </h2>
                     <ul>
-                        <li>Designed and developed full-stack applications using Java 8, Spring Boot, and Hibernate, optimizing performance by 20%.
-                        <li>Developed real-time dashboards with React and CSS, increasing user engagement by 15%.</li>
-                        <li>Integrated AWS EC2 and Lambda for an internal management system, reducing manual processing time by 30%.</li>
-                        <li>Enhanced MySQL query performance, improving execution time by 40% for 100+ daily transactions.</li>
-                        <li>Collaborated with the DevOps team to automate CI/CD pipelines, reducing deployment times by 50%.</li>
-                        <li>Led code reviews and mentored junior developers, improving coding standards and reducing post-release defects by 20%.</li>
+                        <li>Developed and maintained backend services using C# and .NET Core, alongside Java-based microservices, supporting high-volume transactional workflows including order validation, pricing updates, invoicing, and payment triggers.</li>
+                        <li>Designed and consumed JSON- and XML-based APIs, enabling reliable structured data exchange between internal services and external integrations.</li>
+                        <li>Implemented data validation, transformation, and reconciliation logic, reducing downstream data inconsistencies by ~30% in production environments.<li>
+                        <li>Developed and tuned SQL queries and stored procedures, improving reporting and reconciliation job performance by 20–30%.<li>
+                        <li>Deployed and supported services on Microsoft Azure, implementing monitoring, logging, and alerting to triage and resolve production issues.<li>
+                        <li>Collaborated with cross-functional teams in an agile environment, participating in design discussions, demos, and continuous improvement initiatives.</li>
                     </ul>
                 `;
             } else if (company === 'Airbnb' && role === 'Software Engineer') {
                 experienceContent.innerHTML = `
                     <h2>Software Developer - Airbnb</h2>
                     <ul>
-                        <li>Conceptualized Python with Pandas to process and analyze 25,000 months of booking data, identifying seasonal trends, occupancy patterns, and revenue fluctuations to enhance business insights.
-<li>Engineered machine learning models leveraging Python with SciKit-Learn, implementing regression algorithms to improve demand forecasting accuracy, aiding in better occupancy rate predictions.</li>
-<li>Constructed scalable backend services using Django, integrating data analysis modules with Airbnb’s internal tools to automate reporting and enhance system efficiency.</li>
-<li>Deployed containerized solutions on AWS Cloud, utilizing EC2 instances and AWS Lambda to streamline real-time data processing workflows, reducing processing delays and enhancing scalability.</li>
-<li>Migrated archival datasets to Google Cloud Platform, using BigQuery and Cloud Storage to enable optimized querying, faster data retrieval, and cost-effective long-term storage solutions.</li>
-<li> Designed responsive dashboards with Bootstrap, enabling stakeholders to visualize key performance metrics, trends, and booking insights for better decision-making.</li>
-<li> Debugged complex codebases in Visual Studio and Eclipse, enhancing error-handling mechanisms and reducing runtime issues, ensuring smoother software execution and stability.</li>
-<li> Collaborated on RESTful API development using ExpressJS and NodeJS, optimizing data exchange between analytical modules and frontend systems, ensuring seamless communication across services.</li>
-<li> Implemented GraphQL APIs using Java (GraphQL Java library) to optimize data fetching for analytical dashboards, reducing latency and improving frontend performance.</li>
-<li> Designed gRPC-based microservices in Java for efficient inter-service communication, reducing response times and improving data transfer efficiency across distributed systems.</li>
+                        <li>Developed and maintained backend services using Python (Flask, FastAPI) to support API-driven applications handling referral, rewards, and transactional workflows.</li>
+                        <li>Designed and implemented RESTful APIs with well-defined JSON contracts, enabling reliable communication between backend services and downstream consumers.</li>
+                        <li>Built and supported data processing pipelines using PostgreSQL and Cassandra, ensuring accurate storage, retrieval, and consistency of application data.</li>
+                        <li>Implemented data validation, error handling, and logging mechanisms to improve system reliability and simplify production troubleshooting.</li>
+                        <li>Worked extensively with SQL queries to support reporting, reconciliation, and operational analysis in production environments.</li>
+                        <li>Collaborated with frontend teams in a limited capacity to ensure API compatibility with React Native and GraphQL-based clients, focusing primarily on backend stability and performance.</li>
                     </ul>
                 `;
-            } else {
+            } else if (company === 'University of Washington' && role === 'Software Engineer') {
+                experienceContent.innerHTML = `
+                    <h2>Software Engineer - University of Washington </h2>
+                    <ul>
+                        <li>Own backend development and ongoing maintenance for WA-CECI (Washington Coaching Companion)), a live production platform on AWS supporting 10k+ active users across statewide coaching and early-learning programs.</li>
+<li>Develop and maintain backend services using Python (Django), exposing RESTful APIs consumed by internal systems and React-based frontends.</li>
+<li>Designed and optimized PostgreSQL schemas and queries, reducing average query response times by 20–25% for reporting and operational workflows.</li>
+<li>Lead structured data exchange workflows (EDI-adjacent) by building and maintaining API- and file-based integrations using JSON and XML, ensuring data validation, traceability, and compliance across downstream systems.</li>
+<li>Implement authentication, authorization, input validation, and audit-friendly logging to support privacy, compliance, and data governance requirements.</li>
+<li>Collaborate with product owners and non-technical stakeholders to gather requirements, demo features, and iterate using an agile delivery approach.</li>
+<li>Diagnose and resolve production issues by analyzing logs, database queries, and application metrics, improving system stability for real users.</li>
+                    </ul>
+                `;
+
+                 } else {
                 experienceContent.innerHTML = '<p>Experience details not found.</p>';
             }
 
